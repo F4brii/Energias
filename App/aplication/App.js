@@ -25,11 +25,11 @@ function App(){
             { 
               title: <Text style={{fontSize: 20, color: '#fff'}}>Calculadora de cables</Text>,
               headerStyle: {
-                backgroundColor: '#f4511e',
+                backgroundColor: '#000962',
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
-              }
+              },
             }
           }
         />
