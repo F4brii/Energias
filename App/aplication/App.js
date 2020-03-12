@@ -2,7 +2,7 @@
 
 //Stores
 import * as React from 'react';
-import { Text, View,  StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -14,21 +14,24 @@ import Index from './src/index';
 const Stack = createStackNavigator();
 
 //navigation function
-function App(){
+function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen 
-          name="Calculadora de cables" 
-          component={Index} 
+        <Stack.Screen
+          name="Calculadora de cables"
+          component={Index}
           options={
-            { 
-              title: <Text style={{fontSize: 20, color: '#fff'}}>Calculadora de cables</Text>,
+            {
+              title: 'Calculadora de cables',
+              headerTitleAlign: 'center',
               headerStyle: {
                 backgroundColor: '#000962',
               },
               headerTitleStyle: {
                 fontWeight: 'bold',
+                fontSize: 20,
+                color: '#fff'
               },
             }
           }

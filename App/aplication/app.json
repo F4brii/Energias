@@ -11,10 +11,10 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -23,8 +23,17 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "splash": {
+        "mdpi": "./assets/android/MDPI.png",
+        "hdpi": "./assets/android/HDPI.png",
+        "xhdpi": "./assets/android/XHDPI.png",
+        "xxhdpi": "./assets/android/XXHDPI.png",
+        "xxxhdpi": "./assets/android/XXXHDPI.png",
+        "resizeMode": "cover"
+      },
+      "versionCode": 1
     },
     "description": ""
   }
