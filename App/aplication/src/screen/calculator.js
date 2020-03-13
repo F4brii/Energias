@@ -101,9 +101,9 @@ export default class extends Component {
         return (
             <View style={styles.container}>
                 <View style={[styles.box, styles.box1]}>
-                    <View style={{ flex: 1, flexDirection: 'row', marginTop: 25, marginLeft: 10, justifyContent: 'center', alignContent: 'center' }}>
+                    <View style={{ flex: 1, flexDirection: 'row', marginTop: 25, justifyContent: 'center', alignContent: 'center' }}>
                         <TextInput
-                            style={{ height: 30, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 170 }}
+                            style={{ height: 40, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 170, marginRight: 35 }}
                             placeholder="Longitud"
                             placeholderTextColor='#929395'
                             onChangeText={(longitud) => longitud > 0 ? this.setState({ longitud }) : alert("Datos incorrectos. Debe ser mayor a 0")}
@@ -124,11 +124,11 @@ export default class extends Component {
                 </View>
                 <View style={[styles.box, styles.box2]}>
                     <View style={{ flexDirection: 'column', justifyContent: 'center', alignContent: 'center' }}>
-                        <Text style={{ marginTop: 1, marginLeft: 20, fontSize: 17, marginBottom: 10, fontWeight: 'bold' }}>Caida de Tensión</Text>
+                        <Text style={{ marginTop: 1, marginLeft: 20, fontSize: 20, marginBottom: 10, fontWeight: 'bold' }}>Caida de Tensión</Text>
                         <View style={{ flexDirection: 'row', marginLeft: 20, alignContent: 'center', justifyContent: 'center' }}>
                             <View style={{ flexDirection: 'row', padding: 0 }}>
                                 <TextInput
-                                    style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 70 }}
+                                    style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 100 }}
                                     onChangeText={(tension) => (tension > 0 && tension <= 5) ? this.setState({ tension }) : alert("No debe superar el 5%")}
                                     value={this.state.text}
                                     keyboardType={'numeric'}
@@ -139,7 +139,7 @@ export default class extends Component {
                             <View style={{ flexDirection: 'row', padding: 0, marginRight: 10 }}>
                                 <TextInput
                                     placeholder='Voltaje'
-                                    style={{ height: 30, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 70, textAlign: 'center' }}
+                                    style={{ height: 30, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 100, textAlign: 'center' }}
                                     onChangeText={(voltaje) => this.setState({ voltaje })}
                                     value={this.state.text}
                                     keyboardType={'numeric'}
@@ -148,7 +148,7 @@ export default class extends Component {
                                 <Text style={{ fontSize: 18, fontWeight: '600', marginRight: 10 }}>V</Text>
                                 <TextInput
                                     placeholder='Temperatura'
-                                    style={{ height: 30, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 90, textAlign: 'center' }}
+                                    style={{ height: 30, fontSize: 15, borderColor: 'gray', borderBottomWidth: 2, width: 100, textAlign: 'center' }}
                                     onChangeText={(temperatura) => (temperatura > 0 && temperatura <= 60) ? this.setState({ temperatura }) : alert("No debe superar 60 C")}
                                     value={this.state.text}
                                     keyboardType={'numeric'}
@@ -161,7 +161,7 @@ export default class extends Component {
                 </View>
                 <View style={[styles.box, styles.box3]}>
                     <View style={{ flexDirection: 'column', justifyContent: 'center', alignContent: 'center', marginLeft: 15, marginTop: 20 }}>
-                        <Text style={{ fontSize: 17, marginLeft: 10, marginBottom: 10, fontWeight: 'bold' }}>Aislante</Text>
+                        <Text style={{ fontSize: 20, marginLeft: 10, marginBottom: 10, fontWeight: 'bold' }}>Aislante</Text>
                         <View style={{ flexDirection: 'row', alignContent: 'center', justifyContent: 'center' }}>
                             <RadioForm
                                 radio_props={props_aislante}
@@ -177,9 +177,9 @@ export default class extends Component {
                 </View>
                 <View style={[styles.box, styles.box5]}>
                     <View style={{ flexDirection: 'row', justifyContent: 'center', alignContent: 'center', marginTop: 15 }}>
-                        <View style={{ flexDirection: 'column', marginTop: 10, marginLeft: 20 }}>
+                        <View style={{ flexDirection: 'column', marginTop: 10, marginLeft: 10, marginRight: 20 }}>
                             <View style={{ marginBottom: 15 }}>
-                                <Text style={{ marginBottom: 5, fontWeight: 'bold', fontSize: 14 }}>Monofasico</Text>
+                                <Text style={{ marginBottom: 5, fontWeight: 'bold', fontSize: 20 }}>Monofasico</Text>
                                 <ToggleSwitch
                                     isOn={this.state.monofasico}
                                     onColor="gray"
@@ -194,7 +194,7 @@ export default class extends Component {
                                 />
                             </View>
                             <View>
-                                <Text style={{ marginBottom: 5, fontWeight: 'bold', fontSize: 14 }}>Forma de montar</Text>
+                                <Text style={{ marginBottom: 5, fontWeight: 'bold', fontSize: 20 }}>Forma de montar</Text>
                                 <View style={{ flexDirection: 'row' }}>
                                     <ToggleSwitch
                                         isOn={this.state.montaje}
@@ -214,11 +214,11 @@ export default class extends Component {
                         </View>
                         <View style={{ flexDirection: 'column', marginTop: 10, marginLeft: 30 }}>
                             <View>
-                                <Text style={{ color: "black", fontWeight: "900", fontSize: 14, marginLeft: 10 }}># Tubos</Text>
+                                <Text style={{ color: "black", fontWeight: "900", fontSize: 20, marginLeft: 10 }}># Tubos</Text>
                                 <View style={{ flexDirection: 'row' }}>
-                                    <Text style={{ fontWeight: '600', marginTop: 10 }}>H: </Text>
+                                    <Text style={{ fontWeight: '600', marginTop: 10, fontSize: 15 }}>H: </Text>
                                     <TextInput
-                                        style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 60, textAlign: 'center' }}
+                                        style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 90, textAlign: 'center' }}
                                         onChangeText={(horizontal) => (horizontal >= 1 && horizontal <= 6) ? this.setState({ horizontal }) : alert("No debe superar 6")}
                                         value={this.state.text}
                                         keyboardType={'numeric'}
@@ -226,9 +226,9 @@ export default class extends Component {
                                     />
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
-                                    <Text style={{ fontWeight: '600', marginTop: 10 }}>V: </Text>
+                                    <Text style={{ fontWeight: '600', marginTop: 10, fontSize: 15 }}>V: </Text>
                                     <TextInput
-                                        style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 60, textAlign: 'center' }}
+                                        style={{ height: 30, fontSize: 20, borderColor: 'gray', borderBottomWidth: 2, width: 90, textAlign: 'center' }}
                                         onChangeText={(vertical) => (vertical >= 1 && vertical <= 6) ? this.setState({ vertical }) : alert("nodebe superar a 6")}
                                         value={this.state.text}
                                         keyboardType={'numeric'}
@@ -251,7 +251,7 @@ export default class extends Component {
                     </View>
                 </View>
                 <View style={[styles.box, styles.box4]}>
-                    <View style={{ marginTop: 25, width: 150 }}>
+                    <View style={{ marginTop: 25, width: 250, height: 100 }}>
                         <Button
                             title="Calcular cable"
                             onPress={

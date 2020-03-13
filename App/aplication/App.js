@@ -26,6 +26,7 @@ function App() {
           options={
             {
               title: "Menú",
+              headerTitleAlign: 'center',
               headerStyle: {
                 backgroundColor: '#000962',
               },
