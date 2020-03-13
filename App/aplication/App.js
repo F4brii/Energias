@@ -8,7 +8,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 //Components
 
-import Index from './src/index';
+import calculator from './src/screen/calculator';
+import index from './src/index'
+import demanda from './src/screen/damanda'
 
 //browser
 const Stack = createStackNavigator();
@@ -17,13 +19,48 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Index'>
         <Stack.Screen
-          name="Calculadora de cables"
-          component={Index}
+          name="Index"
+          component={index}
+          options={
+            {
+              title: "Menú",
+              headerStyle: {
+                backgroundColor: '#000962',
+              },
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 20,
+                color: '#fff'
+              },
+            }
+          }
+        />
+        <Stack.Screen
+          name="Calculadora"
+          component={calculator}
           options={
             {
               title: 'Calculadora de cables',
+              headerTitleAlign: 'center',
+              headerStyle: {
+                backgroundColor: '#000962',
+              },
+              headerTitleStyle: {
+                fontWeight: 'bold',
+                fontSize: 20,
+                color: '#fff'
+              },
+            }
+          }
+        />
+        <Stack.Screen
+          name="Bombillas"
+          component={demanda}
+          options={
+            {
+              title: 'Demanda máxima',
               headerTitleAlign: 'center',
               headerStyle: {
                 backgroundColor: '#000962',
