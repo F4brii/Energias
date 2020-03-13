@@ -368,7 +368,7 @@ const calcularTomas = (anchoH, numeroH, largoH, anchoB, numeroB, largoB, anchoP,
     }
     let tomas = {
         habitacion: determinarTomasHabitacion(valores),
-        bano: determinarTomasBano(valores),
+        bano: 1,
         patio: determinarTomasPatio(valores),
         cocina: determinarTomasCocina(valores),
         sala: determinarTomasSala(valores),
